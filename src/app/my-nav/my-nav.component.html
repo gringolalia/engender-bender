@@ -1,0 +1,38 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav dignity" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar>
+      <!-- <mat-icon>all_inclusive</mat-icon> -->
+      <i class="fas fa-chess-knight fa-lg"></i>
+      &nbsp;&nbsp;Cardápio</mat-toolbar>
+    <mat-nav-list class="dignity" (click)="sidenav.toggle()">
+      <a mat-list-item routerLink="/first-page"><mat-icon class="fas fa-sun"></mat-icon>&nbsp;&nbsp;Gizmos</a>
+      <a mat-list-item routerLink="/second-page"><mat-icon class="fas fa-archway"></mat-icon>&nbsp;&nbsp;Turing Machines</a>
+      <a mat-list-item routerLink="/third-page"><mat-icon class="fas fa-coffee"></mat-icon>&nbsp;&nbsp;&nbsp;Thingamabobs</a>
+      <a mat-list-item routerLink="/riding-fourth"><mat-icon>waves</mat-icon>&nbsp;&nbsp;Bugigangas</a>
+      <a mat-list-item routerLink="/second-page"><mat-icon class="fas fa-broadcast-tower mr-2"></mat-icon>&nbsp;&nbsp;Doohickeys</a>
+      <a mat-list-item routerLink="/playing-cards"><mat-icon class="fas fa-star-and-crescent mr-2"></mat-icon>&nbsp;&nbsp;In the Cards</a>
+      <a mat-list-item routerLink="/mission-control"><mat-icon class="fas fa-sun"></mat-icon>&nbsp;&nbsp;Goldberg Machines</a>
+      <a mat-list-item routerLink="/my-dashboard"><mat-icon class="fas fa-chess-rook"></mat-icon>&nbsp;&nbsp;Engenhocas</a>
+      <a mat-list-item routerLink="/"><mat-icon class="fas fa-chess-queen"></mat-icon>&nbsp;&nbsp;Gatos Puxados</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <i class="fa fa-sun fa-2x"></i>
+      <span class="dignity">&nbsp;&nbsp;Engenhocas Cariocas LLC</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

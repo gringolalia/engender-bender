@@ -1,0 +1,34 @@
+<div class="grid-container mat-typography">
+  <h1 class="mat-h1">Painel de Controle</h1>
+
+  <mat-grid-list cols="2" rowHeight="350px">
+
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title class="dignity">
+            {{card.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before" style="background-color: #607d8b;">
+              <button mat-menu-item><mat-icon>directions_bike</mat-icon>San Pavlov</button>
+              <button mat-menu-item><mat-icon>my_location</mat-icon>Samboja</button>
+              <button mat-menu-item><mat-icon>rowing</mat-icon>Rio de Dinheiro</button>
+              <button mat-menu-item><mat-icon>place</mat-icon>Os Pífanos de Piauí</button>
+              <button mat-menu-item><mat-icon>smoking_rooms</mat-icon>Marlboros Paraguaios</button>
+              <button mat-menu-item><mat-icon>directions_transit</mat-icon>Minas Neoliberais</button>
+              <button mat-menu-item><mat-icon>free_breakfast  </mat-icon>Disparos Bolsonaros</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+
+              <div>Лорем ипсум долор сит амет, про унум импедит яуаестио ад, видит поссе номинави хас но. Ех меи либер цаусае яуаеяуе, еу яуи бландит тациматес номинати. Яуи ад сумо дицат. Магна ехпетенда дуо ан. Еос яуаеяуе инсоленс те.
+        </div>
+
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

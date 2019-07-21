@@ -1,0 +1,19 @@
+.sidenav-container {
+  font-family: 'News Cycle', sans-serif !important;
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  font-family: 'News Cycle', sans-serif !important;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}

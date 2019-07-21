@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css');
+@import url('https://fonts.googleapis.com/css?family=News+Cycle|Material-Icons');
+@import './theme.scss';
+@import '~bootstrap/scss/bootstrap-reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+
+html, body { height: 100%; margin: 0px;}
+body, a, mat-toolbar {
+  margin: 0;
+  font-family: "News Cycle", "Helvetica Neue", sans-serif !important;
+  font-weight: 300 !important;
+  }

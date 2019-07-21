@@ -1,0 +1,10 @@
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config($font-family: '"News Cycle", sans-serif;');
+@include mat-core($custom-typography);
+
+$custom-primary: mat-palette($mat-blue-grey);
+$custom-accent: mat-palette($mat-yellow, 100);
+$custom-warn: mat-palette($mat-red, 300);
+$custom-theme: mat-dark-theme($custom-primary, $custom-accent);
+@include angular-material-theme($custom-theme);
